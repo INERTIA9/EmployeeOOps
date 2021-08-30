@@ -1,29 +1,45 @@
 
 public class EmployeeWageComputation {
 	public static void main(String[] arg) {
-		 EmployeeWage();
-	   }
-		static void EmployeeWage() {
-			 int empWagePerHour=20;
-				int fullDayHour=8;
-				int halfDayHour=4;
-				int is_full_time=1;
-				int is_part_time=2;
-			 int empcheck =(int) Math.floor(Math.random()*10)%3;
-			if(empcheck==is_full_time) {
-				System.out.println("Employee is present");
-				int dailyWage=empWagePerHour*fullDayHour;
-				System.out.println("Daily wage of employee in full time is "+dailyWage);
-			}
-			else if(empcheck==is_part_time){
-				int PartTimeWage=empWagePerHour*halfDayHour;
-				System.out.println("Daily wage of employee in part time is "+PartTimeWage);
-			}else {
-				System.out.println("Employee is absent");
-				System.out.println("As employee is absent so his daily wage is 0");
-			}
+		CompanyA a = new CompanyA();
+		a.EmployeeWage1();
+		CompanyB b = new CompanyB();
+		b.EmployeeWage();
+		CompanyC c = new CompanyC();
+		c.EmployeeWage();
+	}
+}
+	class CompanyA {
+		void EmployeeWage1() {
+			int empWagePerHour = 40;
+			int WorkingHoursPerDay = 7;
+			int WoringDaysInMonth = 25;
+			int MonthlySalary = empWagePerHour * WorkingHoursPerDay * WoringDaysInMonth;
+			System.out.println("Monthly salary of employee of comapany A is " + MonthlySalary);
+
+		}
+	}
+
+	class CompanyB {
+		void EmployeeWage() {
+			int empWagePerHour = 10;
+			int WorkingHoursPerDay = 6;
+			int WoringDaysInMonth = 27;
+			int MonthlySalary = empWagePerHour * WorkingHoursPerDay * WoringDaysInMonth;
+			System.out.println("Monthly salary of employee of comapany B is " + MonthlySalary);
+
 		}
 
 	}
 
-	
+	class CompanyC {
+		void EmployeeWage() {
+			int empWagePerHour = 30;
+			int WorkingHoursPerDay = 8;
+			int WoringDaysInMonth = 30;
+			int MonthlySalary = empWagePerHour * WorkingHoursPerDay * WoringDaysInMonth;
+			System.out.println("Monthly salary of employee of comapany C is " + MonthlySalary);
+
+		}
+	}
+
